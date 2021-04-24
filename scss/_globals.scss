@@ -1,0 +1,74 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $backgroundColor;
+  font-family: "Kumbh Sans", "sans-serif";
+  font-size: font-sm;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url("https://jeraldinnemg.github.io/profile-card-component/images/bg-pattern-top.svg"),
+    url("https://jeraldinnemg.github.io/profile-card-component/images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 20vw bottom 50vh, left 20vw top 50vh;
+  overflow: hidden;
+}
+
+// flexbox
+.flex {
+  display: flex;
+
+  &-jc-c {
+    justify-content: center;
+  }
+  &-jc-sa {
+    justify-content: space-between;
+  }
+  &-ai-c {
+    align-items: center;
+  }
+  &-ai-sa {
+    align-items: space-around;
+  }
+}
+
+.text-principal {
+  font-size: $font-m;
+  font-weight: $weight-bold;
+  color: $primary;
+}
+
+.text-secundary {
+  font-size: $font-sm;
+  font-weight: $weight-regular;
+  color: $secondary;
+}
+
+.text-tertiary {
+  font-size: $font-xs;
+  font-weight: $weight-regular;
+  letter-spacing: 2px;
+  color: $secondary;
+}
+.text-neutral {
+  font-size: $font-m;
+  font-weight: $weight-regular;
+  color: $secondary;
+}
+
+// media queries
+@media (min-width: 375px) {
+  .hide-mobile {
+    background-position: right 50vw bottom 40vh, left 50vw top 40vh;
+  }
+}
